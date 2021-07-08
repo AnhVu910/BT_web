@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Trang Đăng Ký</title>
+	<link rel="stylesheet" href="Style/Registry_page.css"/>
+	<script type="text/javascript" src="JS/registry.js"></script>
+</head>
+
+<body>
+	<form action="xuly.php" method="post" id="myForm" enctype="multipart/form-data">
+		<div class="register">
+			<h1>Đăng ký</h1>
+				<p>Vui lòng điền thông tin để đăng ký</p>
+			<hr>
+				<label for="username"><b>Họ và Tên</b></label>
+					<input type="text" placeholder="Họ và tên" name="user_name" id="user_name" required="required">
+				<label for="userfile"><b>Ảnh</b></label>
+					<input type="file" name="fileToUpload" id="fileToUpload" required="required"><br>
+		  		<label for="date_onside"><b>Ngày tháng năm sinh</b></label>
+		  			<input type="date" id="date_onside" name="date_onside" value="2000-05-07" required="required"/>
+				<br><label for="gender"><b>Giới tính</b></label><br>
+		  			<span onClick="check_gender();" style="padding: 3rem;" >
+						<input type="radio" name="gender"  value="Nam" required="required"> Nam
+  						<input type="radio" name="gender"  value="Nữ"> Nữ<br>		
+					</span>
+				<label for="user_home"><b>Quê quán</b></label>
+		  			<input type="text" placeholder="Quê quán" name="user_home" id="user_home" required="required">
+		  		<label for="phone"><b>Số điện thoại</b></label>
+		  			<input type="text" placeholder="Số điện thoại" name="phone" id="phone" required="required">
+				<label for="email"><b>Email</b></label>
+		  			<input type="text" placeholder="example@actvn.edu.vn" name="email" id="email" required="required">
+		  		<label for="password"><b>Mật khẩu</b></label>
+					<input type="password" placeholder="******" name="password" id="password" required="required">
+				<label for="password-repeat"><b>Nhập lại mật khẩu</b></label>
+					<input type="password" placeholder="******" name="password-repeat" id="password-repeat" required="required">
+			<hr>
+			<p>Tạo tài khoản là bạn đồng ý với điều khoản của chúng tôi <a href="#"><br>Terms & Privacy</a>.</p>
+				<button type="button" class="button" onClick="check_all()">Đăng ký</button>
+		</div>
+		<div class="register tologin">
+			<p>Bạn đã có tài khoản rồi? <a href="login.html">Đăng nhập</a>.</p>
+		</div>
+	</form>
+</body>
+</html>
